@@ -1,0 +1,420 @@
+/* ============================================================
+   LUZ Y SOMBRA — Hojas de estilo
+   Paleta: beige envejecido, sepia, marrón oscuro, dorado apagado,
+   marfil, violeta oscuro. Estética fantástica, minimalista y mística.
+   ============================================================ */
+
+.root {
+    -fx-background-color: #0a0806;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-smoothing-type: lcd;
+}
+
+/* ------------------------------------------------------------
+   Títulos de pantalla
+   ------------------------------------------------------------ */
+.screen-title {
+    -fx-font-family: "Georgia", "Times New Roman", serif;
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f5ecd8;
+    -fx-effect: dropshadow(gaussian, rgba(184, 155, 94, 0.45), 18, 0.35, 0, 0);
+}
+
+.menu-subtitle {
+    -fx-font-size: 19px;
+    -fx-text-fill: #d9c9a8;
+    -fx-font-style: italic;
+}
+
+/* ------------------------------------------------------------
+   Botones
+   ------------------------------------------------------------ */
+.game-button {
+    -fx-background-color: linear-gradient(to bottom, #c9a86b, #a8864a);
+    -fx-background-radius: 14;
+    -fx-border-color: #3a2a18;
+    -fx-border-width: 2;
+    -fx-border-radius: 14;
+    -fx-text-fill: #2a1d0f;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 26 12 26;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.55), 12, 0.3, 0, 4);
+    -fx-opacity: 1.0;
+    -fx-transition: opacity 0.15s ease;
+}
+
+.game-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #dcc08a, #b89b5e);
+    -fx-effect: dropshadow(gaussian, rgba(255, 226, 160, 0.45), 18, 0.4, 0, 0);
+}
+
+.game-button:pressed {
+    -fx-background-color: #8a6c3a;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.45), 10, 0.3, 0, 2);
+}
+
+.game-button:disabled {
+    -fx-opacity: 0.4;
+    -fx-effect: none;
+}
+
+.game-button:disabled:hover {
+    -fx-opacity: 0.4;
+    -fx-effect: none;
+    -fx-background-color: rgba(60, 50, 40, 0.6);
+    -fx-text-fill: #8a7a60;
+}
+
+.game-button-ghost {
+    -fx-background-color: rgba(24, 16, 10, 0.82);
+    -fx-text-fill: #f5ecd8;
+    -fx-border-color: #b89b5e;
+}
+
+.game-button-ghost:hover {
+    -fx-background-color: rgba(58, 43, 31, 0.95);
+    -fx-text-fill: #ffe6a8;
+    -fx-effect: dropshadow(gaussian, rgba(255, 226, 160, 0.3), 16, 0.35, 0, 0);
+}
+
+/* DANGER: el rojo SOLO aparece en hover; en reposo es neutro como el ghost. */
+.game-button-danger {
+    -fx-background-color: rgba(24, 16, 10, 0.82);
+    -fx-text-fill: #f5ecd8;
+    -fx-border-color: #8a3b2e;
+}
+
+.game-button-danger:hover {
+    -fx-background-color: linear-gradient(to bottom, #8f4a40, #6a312a);
+    -fx-text-fill: #ffe9e0;
+    -fx-border-color: #3a1712;
+}
+
+/* JUGAR del menú: presencia dorada reforzada */
+.game-button-menu-play {
+    -fx-font-size: 20px;
+    -fx-border-color: #f0d394;
+    -fx-border-width: 2.5;
+    -fx-effect: dropshadow(gaussian, rgba(216, 184, 120, 0.35), 18, 0.4, 0, 2);
+}
+
+.game-button-menu-play:hover {
+    -fx-effect: dropshadow(gaussian, rgba(255, 226, 160, 0.6), 26, 0.45, 0, 0);
+}
+
+/* ------------------------------------------------------------
+   Pantalla de carga
+   ------------------------------------------------------------ */
+.loading-screen {
+    -fx-background-color: radial-gradient(center 50% 40%, radius 90%, #3a2c1e, #120c08);
+}
+
+.loading-bar {
+    -fx-accent: #d8b878;
+    -fx-background-color: rgba(10, 8, 6, 0.85);
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(216, 184, 120, 0.5);
+    -fx-border-radius: 8;
+}
+
+.loading-text {
+    -fx-font-size: 16px;
+    -fx-text-fill: #d9c9a8;
+}
+
+/* ------------------------------------------------------------
+   Menú principal y selección de niveles
+   ------------------------------------------------------------ */
+.menu-screen {
+    -fx-background-color: radial-gradient(center 50% 60%, radius 100%, #4a3826, #140e08);
+}
+
+.level-select-screen {
+    -fx-background-color: radial-gradient(center 50% 40%, radius 100%, #33261a, #0d0906);
+}
+
+.volume-label {
+    -fx-text-fill: #d9c9a8;
+    -fx-font-size: 14px;
+}
+
+.volume-slider .track {
+    -fx-background-color: #2a1f14;
+    -fx-background-radius: 6;
+    -fx-pref-height: 8;
+}
+
+.volume-slider .thumb {
+    -fx-background-color: #d8b878;
+    -fx-background-radius: 10;
+    -fx-pref-width: 16;
+    -fx-pref-height: 16;
+}
+
+.volume-mute-button {
+    -fx-min-width: 44;
+    -fx-min-height: 40;
+    -fx-padding: 6 10 6 10;
+    -fx-font-size: 16px;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.volume-mute-button:hover {
+    -fx-background-color: rgba(58, 43, 31, 0.95);
+}
+
+.volume-mute-button.muted {
+    -fx-opacity: 0.6;
+    -fx-border-color: #8a3b2e;
+}
+
+/* ------------------------------------------------------------
+   Tarjetas de niveles
+   ------------------------------------------------------------ */
+.level-card {
+    -fx-background-color: rgba(20, 14, 9, 0.88);
+    -fx-background-radius: 16;
+    -fx-border-color: #5a4630;
+    -fx-border-width: 2;
+    -fx-border-radius: 16;
+    -fx-padding: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 14, 0.35, 0, 4);
+}
+
+.level-card-unlocked:hover {
+    -fx-border-color: #d8b878;
+    -fx-effect: dropshadow(gaussian, rgba(216, 184, 120, 0.4), 22, 0.4, 0, 0);
+}
+
+.level-card-unlocked:pressed {
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
+
+.level-card-locked {
+    -fx-opacity: 0.72;
+    -fx-border-color: #3a2c1e;
+}
+
+.level-card-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f5ecd8;
+}
+
+.level-card-detail {
+    -fx-font-size: 12.5px;
+    -fx-text-fill: #b7a17e;
+}
+
+.new-tag {
+    -fx-background-color: rgba(216, 184, 120, 0.92);
+    -fx-text-fill: #2a1d0f;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 3 8 3 8;
+    -fx-background-radius: 8;
+}
+
+.status-completed {
+    -fx-text-fill: #8fd08f;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.status-available {
+    -fx-text-fill: #d8b878;
+    -fx-font-size: 12px;
+}
+
+.status-locked {
+    -fx-text-fill: #6a5a44;
+    -fx-font-size: 12px;
+}
+
+/* ------------------------------------------------------------
+   Tutorial
+   ------------------------------------------------------------ */
+.tutorial-screen {
+    -fx-background-color: radial-gradient(center 50% 40%, radius 100%, #382a1c, #100b07);
+}
+
+.tutorial-card {
+    -fx-background-color: rgba(24, 17, 11, 0.9);
+    -fx-background-radius: 16;
+    -fx-border-color: rgba(184, 155, 94, 0.4);
+    -fx-border-width: 2;
+    -fx-border-radius: 16;
+    -fx-padding: 18;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 12, 0.3, 0, 3);
+}
+
+.tutorial-card-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Georgia", serif;
+}
+
+.tutorial-card-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #d9c9a8;
+    -fx-line-spacing: 2;
+}
+
+.tutorial-tip {
+    -fx-font-size: 16px;
+    -fx-text-fill: #f0e4c8;
+    -fx-font-style: italic;
+}
+
+.key-cap {
+    -fx-background-color: linear-gradient(to bottom, #4a3826, #2a1d0f);
+    -fx-background-radius: 6;
+    -fx-border-color: #b89b5e;
+    -fx-border-radius: 6;
+    -fx-text-fill: #f5ecd8;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-min-width: 32;
+    -fx-min-height: 28;
+    -fx-alignment: center;
+}
+
+.page-indicator {
+    -fx-font-size: 15px;
+    -fx-text-fill: #d9c9a8;
+    -fx-font-weight: bold;
+}
+
+/* Botón SIGUIENTE en la última página del tutorial */
+.tutorial-start {
+    -fx-text-fill: #ffe6a8;
+    -fx-border-color: #f0d394;
+    -fx-effect: dropshadow(gaussian, rgba(255, 226, 160, 0.35), 16, 0.35, 0, 0);
+}
+
+/* ------------------------------------------------------------
+   HUD del juego
+   ------------------------------------------------------------ */
+.hud {
+    -fx-background-color: rgba(12, 8, 6, 0.72);
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(184, 155, 94, 0.5);
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.3, 0, 2);
+}
+
+.hud-caption {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #b7a17e;
+}
+
+.hud-light {
+    -fx-font-size: 17px;
+    -fx-text-fill: #ffe9b0;
+    -fx-font-weight: bold;
+}
+
+.hud-shadow {
+    -fx-font-size: 17px;
+    -fx-text-fill: #c9a0ff;
+    -fx-font-weight: bold;
+}
+
+.hud-albor {
+    -fx-font-size: 13.5px;
+    -fx-text-fill: #f5e8c8;
+}
+
+.hud-obsidian {
+    -fx-font-size: 13.5px;
+    -fx-text-fill: #d9c0f5;
+}
+
+.hud-level {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f5ecd8;
+    -fx-font-family: "Georgia", serif;
+}
+
+.hud-timer {
+    -fx-font-size: 13px;
+    -fx-text-fill: #b7a17e;
+}
+
+.hud-pause-button {
+    -fx-background-color: rgba(184, 155, 94, 0.25);
+    -fx-background-radius: 10;
+    -fx-border-color: rgba(184, 155, 94, 0.6);
+    -fx-border-radius: 10;
+    -fx-text-fill: #f5ecd8;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 6 8 6 8;
+    -fx-min-width: 44;
+    -fx-min-height: 40;
+    -fx-cursor: hand;
+}
+
+.hud-pause-button:hover {
+    -fx-background-color: rgba(216, 184, 120, 0.45);
+}
+
+/* ------------------------------------------------------------
+   Overlays internos (pausa, derrota, victoria)
+   ------------------------------------------------------------ */
+.overlay-panel {
+    -fx-background-color: rgba(10, 7, 5, 0.94);
+    -fx-background-radius: 22;
+    -fx-border-color: rgba(184, 155, 94, 0.7);
+    -fx-border-width: 2;
+    -fx-border-radius: 22;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 30, 0.4, 0, 8);
+}
+
+.overlay-title {
+    -fx-font-size: 42px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f5ecd8;
+    -fx-font-family: "Georgia", serif;
+    -fx-effect: dropshadow(gaussian, rgba(216, 184, 120, 0.5), 16, 0.4, 0, 0);
+}
+
+.overlay-subtitle {
+    -fx-font-size: 17px;
+    -fx-text-fill: #b7a17e;
+    -fx-font-style: italic;
+}
+
+.overlay-caption {
+    -fx-font-size: 15px;
+    -fx-text-fill: #e8dcc0;
+}
+
+.overlay-stats {
+    -fx-font-size: 15px;
+    -fx-text-fill: #f5ecd8;
+}
+
+.overlay-stats-box {
+    -fx-background-color: rgba(58, 43, 31, 0.5);
+    -fx-background-radius: 10;
+    -fx-padding: 10 18 10 18;
+    -fx-border-color: rgba(184, 155, 94, 0.35);
+    -fx-border-radius: 10;
+}
+
+/* ------------------------------------------------------------
+   Pantalla de juego (fondo por defecto)
+   ------------------------------------------------------------ */
+.game-screen {
+    -fx-background-color: #1a120a;
+}

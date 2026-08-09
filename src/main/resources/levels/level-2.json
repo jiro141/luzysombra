@@ -1,0 +1,42 @@
+{
+  "name": "Nivel 2: Puentes en Movimiento",
+  "width": 4400,
+  "height": 1700,
+  "spawnLight": { "x": 140, "y": 760 },
+  "spawnShadow": { "x": 220, "y": 760 },
+  "objects": [
+    { "id": "suelo-1", "type": "platform", "x": 0, "y": 760, "width": 1200, "height": 40 },
+    { "id": "suelo-2", "type": "platform", "x": 1500, "y": 760, "width": 900, "height": 40 },
+    { "id": "suelo-3", "type": "platform", "x": 2800, "y": 760, "width": 1600, "height": 40 },
+
+    { "id": "plat-alta", "type": "platform", "x": 1550, "y": 480, "width": 420, "height": 36 },
+    { "id": "escalera-1", "type": "ladder", "x": 1680, "y": 480, "width": 48, "height": 280 },
+    { "id": "escalera-2", "type": "ladder", "x": 3720, "y": 520, "width": 48, "height": 240 },
+
+    { "id": "mp-puente", "type": "moving_platform", "x": 2550, "y": 640, "width": 180, "height": 36,
+      "axis": "horizontal", "range": 420, "speed": 140 },
+    { "id": "mp-vertical", "type": "moving_platform", "x": 3000, "y": 500, "width": 180, "height": 36,
+      "axis": "vertical", "range": 240, "speed": 120 },
+    { "id": "plat-cruce", "type": "platform", "x": 3320, "y": 400, "width": 220, "height": 36 },
+
+    { "id": "a1", "type": "collectible", "subtype": "albor", "x": 450, "y": 710 },
+    { "id": "a2", "type": "collectible", "subtype": "albor", "x": 1600, "y": 710 },
+    { "id": "a3", "type": "collectible", "subtype": "albor", "x": 1760, "y": 440 },
+    { "id": "a4", "type": "collectible", "subtype": "albor", "x": 3850, "y": 710 },
+
+    { "id": "o1", "type": "collectible", "subtype": "obsidian", "x": 700, "y": 710 },
+    { "id": "o2", "type": "collectible", "subtype": "obsidian", "x": 1900, "y": 710 },
+    { "id": "o3", "type": "collectible", "subtype": "obsidian", "x": 1840, "y": 440 },
+    { "id": "o4", "type": "collectible", "subtype": "obsidian", "x": 4050, "y": 710 },
+
+    { "id": "pinas-1", "type": "spikes", "x": 850, "y": 732, "width": 120, "height": 28 },
+    { "id": "penumbra-grande", "type": "hazard", "subtype": "penumbra", "x": 2880, "y": 700, "width": 520, "height": 60 },
+    { "id": "luminosidad-grande", "type": "hazard", "subtype": "luminosity", "x": 3550, "y": 700, "width": 520, "height": 60 },
+
+    { "id": "cp1", "type": "checkpoint", "x": 1550, "y": 740 },
+    { "id": "cp2", "type": "checkpoint", "x": 2850, "y": 740 },
+
+    { "id": "puerta-luz", "type": "door", "subtype": "light", "x": 4050, "y": 620, "width": 120, "height": 140 },
+    { "id": "puerta-sombra", "type": "door", "subtype": "shadow", "x": 4190, "y": 620, "width": 120, "height": 140 }
+  ]
+}

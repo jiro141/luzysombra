@@ -1,0 +1,274 @@
+{
+  "name": "Nivel 5: El Último Ritual",
+  "width": 5600,
+  "height": 1800,
+  "spawnLight": {
+    "x": 140,
+    "y": 760
+  },
+  "spawnShadow": {
+    "x": 220,
+    "y": 760
+  },
+  "objects": [
+    {
+      "id": "suelo-1",
+      "type": "platform",
+      "x": 0,
+      "y": 760,
+      "width": 1250,
+      "height": 40
+    },
+    {
+      "id": "suelo-2",
+      "type": "platform",
+      "x": 1550,
+      "y": 760,
+      "width": 700,
+      "height": 40
+    },
+    {
+      "id": "suelo-3",
+      "type": "platform",
+      "x": 2750,
+      "y": 760,
+      "width": 1000,
+      "height": 40
+    },
+    {
+      "id": "suelo-4",
+      "type": "platform",
+      "x": 4150,
+      "y": 760,
+      "width": 1450,
+      "height": 40
+    },
+    {
+      "id": "plat-elev-1",
+      "type": "platform",
+      "x": 1000,
+      "y": 620,
+      "width": 220,
+      "height": 36
+    },
+    {
+      "id": "plat-elev-2",
+      "type": "platform",
+      "x": 1950,
+      "y": 620,
+      "width": 220,
+      "height": 36
+    },
+    {
+      "id": "plat-elev-3",
+      "type": "platform",
+      "x": 3300,
+      "y": 620,
+      "width": 260,
+      "height": 36
+    },
+    {
+      "id": "plat-elev-4",
+      "type": "platform",
+      "x": 4400,
+      "y": 620,
+      "width": 220,
+      "height": 36
+    },
+    {
+      "id": "escalera-1",
+      "type": "ladder",
+      "x": 1200,
+      "y": 620,
+      "width": 48,
+      "height": 140
+    },
+    {
+      "id": "escalera-2",
+      "type": "ladder",
+      "x": 4600,
+      "y": 620,
+      "width": 48,
+      "height": 140
+    },
+    {
+      "id": "mp-puente-1",
+      "type": "moving_platform",
+      "x": 2400,
+      "y": 640,
+      "width": 190,
+      "height": 36,
+      "axis": "horizontal",
+      "range": 460,
+      "speed": 150
+    },
+    {
+      "id": "mp-puente-2",
+      "type": "moving_platform",
+      "x": 3800,
+      "y": 640,
+      "width": 190,
+      "height": 36,
+      "axis": "horizontal",
+      "range": 460,
+      "speed": 150,
+      "switch": "sw-final"
+    },
+    {
+      "id": "sw-final",
+      "type": "switch",
+      "operator": "any",
+      "target": "mp-puente-2",
+      "x": 3000,
+      "y": 732,
+      "width": 90,
+      "height": 28
+    },
+    {
+      "id": "a1",
+      "type": "collectible",
+      "subtype": "albor",
+      "x": 400,
+      "y": 710
+    },
+    {
+      "id": "a2",
+      "type": "collectible",
+      "subtype": "albor",
+      "x": 1110,
+      "y": 580
+    },
+    {
+      "id": "a3",
+      "type": "collectible",
+      "subtype": "albor",
+      "x": 2050,
+      "y": 710
+    },
+    {
+      "id": "a4",
+      "type": "collectible",
+      "subtype": "albor",
+      "x": 3430,
+      "y": 580
+    },
+    {
+      "id": "o1",
+      "type": "collectible",
+      "subtype": "obsidian",
+      "x": 650,
+      "y": 710
+    },
+    {
+      "id": "o2",
+      "type": "collectible",
+      "subtype": "obsidian",
+      "x": 2060,
+      "y": 580
+    },
+    {
+      "id": "o3",
+      "type": "collectible",
+      "subtype": "obsidian",
+      "x": 2900,
+      "y": 710
+    },
+    {
+      "id": "o4",
+      "type": "collectible",
+      "subtype": "obsidian",
+      "x": 4510,
+      "y": 580
+    },
+    {
+      "id": "pinas-1",
+      "type": "spikes",
+      "x": 500,
+      "y": 732,
+      "width": 140,
+      "height": 28
+    },
+    {
+      "id": "pinas-2",
+      "type": "spikes",
+      "x": 2950,
+      "y": 732,
+      "width": 140,
+      "height": 28
+    },
+    {
+      "id": "pinas-3",
+      "type": "spikes",
+      "x": 4400,
+      "y": 732,
+      "width": 140,
+      "height": 28
+    },
+    {
+      "id": "penumbra-1",
+      "type": "hazard",
+      "subtype": "penumbra",
+      "x": 1700,
+      "y": 700,
+      "width": 240,
+      "height": 60
+    },
+    {
+      "id": "luminosidad-1",
+      "type": "hazard",
+      "subtype": "luminosity",
+      "x": 3150,
+      "y": 700,
+      "width": 240,
+      "height": 60
+    },
+    {
+      "id": "penumbra-2",
+      "type": "hazard",
+      "subtype": "penumbra",
+      "x": 4250,
+      "y": 700,
+      "width": 300,
+      "height": 60
+    },
+    {
+      "id": "luminosidad-2",
+      "type": "hazard",
+      "subtype": "luminosity",
+      "x": 4700,
+      "y": 700,
+      "width": 300,
+      "height": 60
+    },
+    {
+      "id": "cp1",
+      "type": "checkpoint",
+      "x": 1600,
+      "y": 740
+    },
+    {
+      "id": "cp2",
+      "type": "checkpoint",
+      "x": 4200,
+      "y": 740
+    },
+    {
+      "id": "puerta-luz",
+      "type": "door",
+      "subtype": "light",
+      "x": 5200,
+      "y": 620,
+      "width": 120,
+      "height": 140
+    },
+    {
+      "id": "puerta-sombra",
+      "type": "door",
+      "subtype": "shadow",
+      "x": 5340,
+      "y": 620,
+      "width": 120,
+      "height": 140
+    }
+  ]
+}

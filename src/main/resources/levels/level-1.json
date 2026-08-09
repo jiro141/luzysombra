@@ -1,0 +1,43 @@
+{
+  "name": "Nivel 1: Primeros Pasos",
+  "width": 3400,
+  "height": 1600,
+  "spawnLight": { "x": 140, "y": 760 },
+  "spawnShadow": { "x": 220, "y": 760 },
+  "objects": [
+    { "id": "suelo", "type": "platform", "x": 0, "y": 760, "width": 3400, "height": 40 },
+
+    { "id": "plat-base-b", "type": "platform", "x": 1080, "y": 640, "width": 420, "height": 36 },
+    { "id": "plat-elevadero", "type": "platform", "x": 1600, "y": 560, "width": 200, "height": 36 },
+    { "id": "plat-int-1", "type": "platform", "x": 1560, "y": 660, "width": 160, "height": 30 },
+    { "id": "plat-int-2", "type": "platform", "x": 1980, "y": 600, "width": 180, "height": 30 },
+    { "id": "plat-obs-puertas", "type": "platform", "x": 2860, "y": 620, "width": 360, "height": 36 },
+
+    { "id": "escalera-a", "type": "ladder", "x": 1400, "y": 620, "width": 48, "height": 150 },
+    { "id": "escalera-b", "type": "ladder", "x": 2460, "y": 620, "width": 48, "height": 150 },
+
+    { "id": "suspendido", "type": "moving_platform", "x": 2160, "y": 470, "width": 180, "height": 30,
+      "axis": "horizontal", "range": 260, "speed": 120 },
+
+    { "id": "a1", "type": "collectible", "subtype": "albor", "x": 420, "y": 710 },
+    { "id": "a2", "type": "collectible", "subtype": "albor", "x": 1260, "y": 580 },
+    { "id": "a3", "type": "collectible", "subtype": "albor", "x": 2220, "y": 440 },
+    { "id": "a4", "type": "collectible", "subtype": "albor", "x": 2960, "y": 560 },
+
+    { "id": "o1", "type": "collectible", "subtype": "obsidian", "x": 600, "y": 710 },
+    { "id": "o2", "type": "collectible", "subtype": "obsidian", "x": 1150, "y": 580 },
+    { "id": "o3", "type": "collectible", "subtype": "obsidian", "x": 2050, "y": 550 },
+    { "id": "o4", "type": "collectible", "subtype": "obsidian", "x": 3120, "y": 560 },
+
+    { "id": "pinas-1", "type": "spikes", "x": 820, "y": 732, "width": 140, "height": 28 },
+    { "id": "pinas-2", "type": "spikes", "x": 1760, "y": 732, "width": 140, "height": 28 },
+    { "id": "penumbra-1", "type": "hazard", "subtype": "penumbra", "x": 2320, "y": 700, "width": 220, "height": 60 },
+    { "id": "luminosidad-1", "type": "hazard", "subtype": "luminosity", "x": 2550, "y": 700, "width": 220, "height": 60 },
+
+    { "id": "cp1", "type": "checkpoint", "x": 1000, "y": 740 },
+    { "id": "cp2", "type": "checkpoint", "x": 2000, "y": 740 },
+
+    { "id": "puerta-luz", "type": "door", "subtype": "light", "x": 3040, "y": 620, "width": 120, "height": 140 },
+    { "id": "puerta-sombra", "type": "door", "subtype": "shadow", "x": 3200, "y": 620, "width": 120, "height": 140 }
+  ]
+}

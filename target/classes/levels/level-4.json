@@ -1,0 +1,218 @@
+{
+  "name": "Nivel 4: Las Alturas",
+  "width": 3600,
+  "height": 2200,
+  "spawnLight": {
+    "x": 140,
+    "y": 1600
+  },
+  "spawnShadow": {
+    "x": 220,
+    "y": 1600
+  },
+  "objects": [
+    {
+      "id": "suelo",
+      "type": "platform",
+      "x": 0,
+      "y": 1600,
+      "width": 3600,
+      "height": 40
+    },
+    {
+      "id": "nivel-1a",
+      "type": "platform",
+      "x": 200,
+      "y": 1200,
+      "width": 1000,
+      "height": 36
+    },
+    {
+      "id": "nivel-1b",
+      "type": "platform",
+      "x": 1450,
+      "y": 1200,
+      "width": 850,
+      "height": 36
+    },
+    {
+      "id": "nivel-2",
+      "type": "platform",
+      "x": 2000,
+      "y": 800,
+      "width": 1300,
+      "height": 36
+    },
+    {
+      "id": "nivel-3a",
+      "type": "platform",
+      "x": 800,
+      "y": 400,
+      "width": 900,
+      "height": 36
+    },
+    {
+      "id": "nivel-3b",
+      "type": "platform",
+      "x": 2200,
+      "y": 400,
+      "width": 1300,
+      "height": 36
+    },
+    {
+      "id": "escalera-1",
+      "type": "ladder",
+      "x": 400,
+      "y": 1200,
+      "width": 48,
+      "height": 400
+    },
+    {
+      "id": "escalera-2",
+      "type": "ladder",
+      "x": 2260,
+      "y": 800,
+      "width": 48,
+      "height": 400
+    },
+    {
+      "id": "escalera-3",
+      "type": "ladder",
+      "x": 2650,
+      "y": 400,
+      "width": 48,
+      "height": 400
+    },
+    {
+      "id": "mp-hueco",
+      "type": "moving_platform",
+      "x": 1850,
+      "y": 300,
+      "width": 170,
+      "height": 36,
+      "axis": "horizontal",
+      "range": 340,
+      "speed": 140
+    },
+    {
+      "id": "a1",
+      "type": "collectible",
+      "subtype": "albor",
+      "x": 350,
+      "y": 1550
+    },
+    {
+      "id": "a2",
+      "type": "collectible",
+      "subtype": "albor",
+      "x": 1500,
+      "y": 1160
+    },
+    {
+      "id": "a3",
+      "type": "collectible",
+      "subtype": "albor",
+      "x": 2150,
+      "y": 760
+    },
+    {
+      "id": "a4",
+      "type": "collectible",
+      "subtype": "albor",
+      "x": 2450,
+      "y": 360
+    },
+    {
+      "id": "o1",
+      "type": "collectible",
+      "subtype": "obsidian",
+      "x": 600,
+      "y": 1550
+    },
+    {
+      "id": "o2",
+      "type": "collectible",
+      "subtype": "obsidian",
+      "x": 1800,
+      "y": 1160
+    },
+    {
+      "id": "o3",
+      "type": "collectible",
+      "subtype": "obsidian",
+      "x": 2700,
+      "y": 760
+    },
+    {
+      "id": "o4",
+      "type": "collectible",
+      "subtype": "obsidian",
+      "x": 3200,
+      "y": 360
+    },
+    {
+      "id": "pinas-suelo",
+      "type": "spikes",
+      "x": 900,
+      "y": 1572,
+      "width": 140,
+      "height": 28
+    },
+    {
+      "id": "pinas-nivel1",
+      "type": "spikes",
+      "x": 1750,
+      "y": 1172,
+      "width": 140,
+      "height": 28
+    },
+    {
+      "id": "penumbra-n2",
+      "type": "hazard",
+      "subtype": "penumbra",
+      "x": 2300,
+      "y": 740,
+      "width": 240,
+      "height": 60
+    },
+    {
+      "id": "luminosidad-n3",
+      "type": "hazard",
+      "subtype": "luminosity",
+      "x": 2700,
+      "y": 340,
+      "width": 260,
+      "height": 60
+    },
+    {
+      "id": "cp1",
+      "type": "checkpoint",
+      "x": 500,
+      "y": 1180
+    },
+    {
+      "id": "cp2",
+      "type": "checkpoint",
+      "x": 2200,
+      "y": 780
+    },
+    {
+      "id": "puerta-luz",
+      "type": "door",
+      "subtype": "light",
+      "x": 3200,
+      "y": 260,
+      "width": 120,
+      "height": 140
+    },
+    {
+      "id": "puerta-sombra",
+      "type": "door",
+      "subtype": "shadow",
+      "x": 3340,
+      "y": 260,
+      "width": 120,
+      "height": 140
+    }
+  ]
+}
