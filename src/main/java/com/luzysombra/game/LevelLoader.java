@@ -19,7 +19,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.logging.Logger;
 
 /**
- * Carga los niveles desde archivos JSON del classpath (/levels/level-N.json).
+ * Carga los niveles desde archivos JSON del classpath (/levels/level-N/level-N.json).
  * Los niveles pueden editarse sin recompilar la aplicación: solo JSON.
  */
 public final class LevelLoader {

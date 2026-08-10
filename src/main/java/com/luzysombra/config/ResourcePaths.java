@@ -20,7 +20,7 @@ public final class ResourcePaths {
     // Niveles
     // ---------------------------------------------------------------
     public static String levelJson(int levelNumber) {
-        return "/levels/level-" + levelNumber + ".json";
+        return "/levels/level-" + levelNumber + "/level-" + levelNumber + ".json";
     }
 
     // ---------------------------------------------------------------

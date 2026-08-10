@@ -228,7 +228,7 @@ Luz y Sombra/
             ├── assets/sounds/…              # Efectos de sonido WAV
             ├── assets/music/…               # Música WAV
             ├── assets/fonts/…               # Fuentes (opcional)
-            ├── levels/level-1.json …        # Definición de niveles
+            ├── levels/level-1/level-1.json …  # Definición de niveles
             └── styles/game.css              # Estilos de toda la UI
 ```
 
@@ -236,7 +236,7 @@ Luz y Sombra/
 
 ## Cómo crear niveles JSON
 
-Cada nivel es un archivo JSON en `src/main/resources/levels/`. El cargador (`LevelLoader.java`) traduce este JSON a los objetos del juego.
+Cada nivel es un archivo JSON en `src/main/resources/levels/level-N/`. El cargador (`LevelLoader.java`) traduce este JSON a los objetos del juego.
 
 ### Formato
 
