@@ -1,7 +1,6 @@
 package com.luzysombra.screens;
 
 import com.luzysombra.config.GameConfig;
-import com.luzysombra.config.ResourcePaths;
 import com.luzysombra.entities.LightPlayer;
 import com.luzysombra.entities.Player;
 import com.luzysombra.entities.ShadowPlayer;
@@ -13,14 +12,11 @@ import com.luzysombra.game.LevelLoader;
 import com.luzysombra.input.InputManager;
 import com.luzysombra.navigation.ScreenManager;
 import com.luzysombra.persistence.ProgressManager;
-import com.luzysombra.resources.ResourceManager;
 import com.luzysombra.ui.GameHud;
 import com.luzysombra.ui.GameOverOverlay;
 import com.luzysombra.ui.PauseOverlay;
 import com.luzysombra.ui.VictoryOverlay;
 import javafx.scene.Group;
-import javafx.scene.Node;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
@@ -81,9 +77,9 @@ public class GameScreen extends StackPane {
         worldGroup.setPrefSize(GameConfig.LOGICAL_WIDTH, GameConfig.LOGICAL_HEIGHT);
         worldGroup.setMaxSize(GameConfig.LOGICAL_WIDTH, GameConfig.LOGICAL_HEIGHT);
         worldGroup.setMinSize(GameConfig.LOGICAL_WIDTH, GameConfig.LOGICAL_HEIGHT);
-        Rectangle worldClip = new Rectangle(GameConfig.LOGICAL_WIDTH, GameConfig.LOGICAL_HEIGHT);
-        worldClip.setFill(Color.TRANSPARENT);
-        worldGroup.setClip(worldClip);
+        // NOTA: se eliminó el clip con fill TRANSPARENT del worldGroup: un clip así
+        // hace que JavaFX recorte TODO el contenido del mundo (personajes y
+        // plataformas invisibles). La ventana de la escena ya recorta el viewport.
 
         hud.setMaxWidth(GameConfig.LOGICAL_WIDTH);
         hud.setMaxHeight(90);
@@ -100,29 +96,9 @@ public class GameScreen extends StackPane {
     // ================================================================
 
     private void buildBackground() {
+        // Fondo sólido oscuro definido por la clase CSS .game-screen;
+        // ya no se renderizan las capas de parallax con imágenes.
         backgroundLayer.setMouseTransparent(true);
-        // Dos capas de parallax: lejana y cercana
-        backgroundLayer.getChildren().addAll(
-                makeBackgroundTile(ResourcePaths.backgroundLevel(levelNumber), 0.12),
-                makeBackgroundTile(ResourcePaths.backgroundLevel(levelNumber), 0.3));
-    }
-
-    /** Crea un panel con el fondo repetido horizontalmente (tile de 3 copias). */
-    private Node makeBackgroundTile(String path, double factor) {
-        Pane tile = new Pane();
-        tile.setMouseTransparent(true);
-        tile.setPrefSize(GameConfig.LOGICAL_WIDTH * 3, GameConfig.LOGICAL_HEIGHT);
-        for (int i = 0; i < 3; i++) {
-            ImageView img = new ImageView(ResourceManager.getInstance().getImage(path));
-            img.setFitWidth(GameConfig.LOGICAL_WIDTH);
-            img.setFitHeight(GameConfig.LOGICAL_HEIGHT);
-            img.setPreserveRatio(false);
-            img.setLayoutX(i * GameConfig.LOGICAL_WIDTH);
-            tile.getChildren().add(img);
-        }
-        // El factor de parallax se registra con el loop; por ahora lo guardamos como propiedad
-        tile.setUserData(factor);
-        return tile;
     }
 
     private void buildLevel() {
@@ -146,11 +122,6 @@ public class GameScreen extends StackPane {
         worldGroup.getChildren().addAll(light.getView(), shadow.getView());
 
         gameLoop = new GameLoop(state, input, camera, worldGroup, listener());
-        // Capas de parallax ya agregadas en el fondo
-        for (Node node : backgroundLayer.getChildren()) {
-            double factor = (double) node.getUserData();
-            gameLoop.addParallaxLayer(node, factor);
-        }
 
         hud.setLevelName(level.getName());
         hud.setLives(light.getLives(), shadow.getLives());
